@@ -9,4 +9,11 @@ function getComputerChoice (){
         return "scissors";
     }
 }
-console.log(getComputerChoice())
+// console.log(getComputerChoice())
+
+// human choice
+function getHumanChoice(){
+    let humanChoice = prompt("Please Enter Your choice:")
+    return humanChoice;
+}
+console.log(getHumanChoice())
