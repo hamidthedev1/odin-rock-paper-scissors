@@ -1,4 +1,4 @@
-//Computer choice
+// Generate a random computer choice
 function getComputerChoice() {
     const random = Math.floor(Math.random() * 3);
     if (random === 0){
@@ -12,20 +12,20 @@ function getComputerChoice() {
 
 // console.log(getComputerChoice())
 
-// human choice
+// How human insert his choice
 function getHumanChoice() {
     let userInput = prompt("Please Enter Your choice:");
     return userInput;
 }
-// console.log(getHumanChoice())
+// Get the human player's choice
 
-// playGame logic
+// Manage the entire game
 function playGame() {
-// players score variables
+// Initialize player scores
 let humanScore = 0;
 let computerScore = 0;
 
-// play round logic
+// Handle one round
 function playRound (humanChoice, computerChoice) {
 humanChoice = humanChoice.toLowerCase();
 
@@ -45,13 +45,14 @@ else {
 }
 }
 
- // Repeat 5 Times
-for (let i = 0; i < 10; i++) {
+ // Play five rounds
+for (let i = 0; i < 5; i++) {
    const humanSelection = getHumanChoice();
    const computerSelection = getComputerChoice();
 console.log(playRound(humanSelection, computerSelection));
 }
 
+// Determine the overall winner
 if (humanScore > computerScore){
     console.log(`You win the game ${humanScore} : ${computerScore}`)
 } else if (humanScore < computerScore){
